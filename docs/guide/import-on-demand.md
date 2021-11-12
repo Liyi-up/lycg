@@ -5,7 +5,7 @@
 你可以手动引入部分组件：
 
 ```js
-import Foo from 'cvmcp/es/components/foo';
+import Foo from 'lycg/es/components/foo';
 ```
 
 当然，如果你觉得上面的写法过于繁琐，你也可以使用 [babel-plugin-import](https://github.com/ant-design/babel-plugin-import) 来进行自动语法转换。
@@ -14,7 +14,7 @@ import Foo from 'cvmcp/es/components/foo';
 
 ```js
 module.exports = {
-  plugins: [['import', { libraryName: 'cvmcp', libraryDirectory: 'es/components', style: false }]],
+  plugins: [['import', { libraryName: 'lycg', libraryDirectory: 'es/components', style: false }]],
 };
 ```
 
@@ -28,11 +28,11 @@ export default defineConfig({
     [
       'import',
       {
-        libraryName: 'cvmcp',
+        libraryName: 'lycg',
         style: false,
         libraryDirectory: 'es/components',
       },
-      'cvmcp',
+      'lycg',
     ],
   ],
 });
