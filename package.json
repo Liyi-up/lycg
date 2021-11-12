@@ -1,7 +1,10 @@
 {
-  "private": true,
+  "private": false,
   "name": "lycg",
   "version": "1.0.2",
+  "files": [
+	  "dist"
+	],
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",

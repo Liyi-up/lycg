@@ -15,5 +15,5 @@ yarn add lycg@next
 直接引入组件即可，cvmcp 会自动为你加载 css 样式文件：
 
 ```js
-import { Uploader } from 'lycg';
+import { Foo } from 'lycg';
 ```
