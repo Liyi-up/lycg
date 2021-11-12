@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "dumi-template",
+  "name": "lycg",
   "version": "1.0.0",
   "scripts": {
     "start": "dumi dev",
@@ -33,6 +33,7 @@
     ]
   },
   "dependencies": {
+    "dumi-theme-mobile": "^1.1.14",
     "react": "^16.12.0"
   },
   "devDependencies": {
