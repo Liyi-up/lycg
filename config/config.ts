@@ -14,6 +14,8 @@ export default defineConfig({
   resolve: {
     passivePreview: true,
   },
+  ssr: {},
+  exportStatic: {},
   navs: [
     {
       title: '指南',
