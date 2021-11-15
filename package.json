@@ -36,6 +36,8 @@
     ]
   },
   "dependencies": {
+    "ahooks": "^2.10.12",
+    "antd-mobile": "^2.3.4",
     "qrcode.react": "^1.0.1",
     "react": "^16.12.0"
   },
