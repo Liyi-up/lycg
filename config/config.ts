@@ -56,6 +56,10 @@ export default defineConfig({
         title: '基础组件',
         children: components.basic,
       },
+      {
+        title: '其他',
+        children: components.other,
+      },
     ],
   },
   locales: [['zh', '中文']],

@@ -1,2 +1,2 @@
 export { default as Foo } from './components/foo';
-export { default as Falls } from './components/falls';
+export { default as GraphCode } from './components/graph-code';
