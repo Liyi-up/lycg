@@ -57,6 +57,10 @@ export default defineConfig({
         children: components.basic,
       },
       {
+        title: '数据录入',
+        children: components.dataEntry,
+      },
+      {
         title: '其他',
         children: components.other,
       },
