@@ -1,7 +1,7 @@
 import React from 'react';
 import { GraphCode } from 'lycg';
 import { Input, Form, Button, Toast } from 'antd-mobile';
-import Styles from './index.less';
+import styles from './index.less';
 const Page = () => {
   const codeRef = React.useRef<string>();
   const [form] = Form.useForm();
@@ -33,7 +33,7 @@ const Page = () => {
       }
     >
       <Form.Item name="code" label="验证码">
-        <div className={Styles.codeWrap}>
+        <div className={styles.codeWrap}>
           <Input placeholder="请输入图形验证码" />
           <GraphCode
             width={100}

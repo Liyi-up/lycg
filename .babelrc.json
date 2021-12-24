@@ -1,0 +1,26 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "loose": true,
+        "modules": false
+      }
+    ],
+    "@babel/preset-typescript",
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    [
+      "import",
+      {
+        "libraryName": "antd-mobile",
+        "libraryDirectory": "es/components",
+        "style": false
+      }
+    ],
+    "babel-plugin-transform-async-to-promises",
+    "./plugins/babel-transform-less-to-css"
+  ],
+  "ignore": ["**/demos"]
+}

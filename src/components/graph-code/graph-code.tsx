@@ -6,7 +6,7 @@ import {
   randomNum,
 } from '../../utils/graphCode';
 
-const classPrefix = `cv-graph-code`;
+const classPrefix = `ly-graph-code`;
 export interface CompProps {
   /**
    * 高度
