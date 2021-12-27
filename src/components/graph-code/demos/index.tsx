@@ -2,8 +2,10 @@ import React from 'react';
 import { GraphCode } from 'lycg';
 import { Input, Form, Button, Toast } from 'antd-mobile';
 import styles from './index.less';
+import { CompRefProps } from '../graph-code';
 const Page = () => {
   const codeRef = React.useRef<string>();
+  const ref = React.useRef<CompRefProps>(null);
   const [form] = Form.useForm();
 
   const submit = () => {
@@ -19,6 +21,7 @@ const Page = () => {
         content: '验证码错误',
       });
     }
+    ref.current?.refresh();
   };
 
   return (
@@ -36,6 +39,7 @@ const Page = () => {
         <div className={styles.codeWrap}>
           <Input placeholder="请输入图形验证码" />
           <GraphCode
+            ref={ref}
             width={100}
             height={40}
             charNum={4}

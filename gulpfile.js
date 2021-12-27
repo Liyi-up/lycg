@@ -10,6 +10,10 @@ const webpack = require('webpack');
 const through = require('through2');
 const tsconfig = require('./tsconfig.json');
 
+/**
+ * 自动删除上一次打包生成的资源文件（确保每次打包的都是最新的资源）
+ * @returns
+ */
 function clean() {
   return del('./lib/**');
 }
