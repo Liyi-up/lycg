@@ -1,11 +1,11 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { debounce } from '../../utils';
 
-export interface LinkSiderBarProps {
+export type LinkSiderBarProps = {
   tabs: tabItem[];
   defaultKey?: string;
   renderItem: (val: tabItem) => React.ReactNode;
-}
+};
 
 export type tabItem = {
   key: string;
@@ -29,10 +29,11 @@ const LinkSiderBar: React.FC<LinkSiderBarProps> = props => {
       const offsetTop = childrens[i].offsetTop;
       const elemH = childrens[i].clientHeight;
       if (offsetTop <= scrollTop && offsetTop + elemH > scrollTop) {
-        debounce(setActiveKey(tabs[i].key), 500, true);
+        setActiveKey(tabs[i].key);
       }
     }
   };
+
   return (
     <div className={`${classPrefix}`}>
       <nav className={`${classPrefix}-nav-wrap`}>

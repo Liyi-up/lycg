@@ -1,5 +1,6 @@
 import './uploader.less';
-import { Uploader } from './uploader';
-export { UploaderProps } from './uploader';
+import { Uploader, UploaderProps } from './uploader';
+
+export { UploaderProps };
 
 export default Uploader;
