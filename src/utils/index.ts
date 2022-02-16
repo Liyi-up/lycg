@@ -8,9 +8,14 @@
  **/
 export function debounce(func: any, wait: number, immediate: boolean) {
   let timer: NodeJS.Timeout | null;
-  return function(this: any) {
+  return function(this: any, ...params: any[]) {
     const context = this;
-    const args = arguments;
+    const args: {
+      // 类数组注解
+      [index: number]: any;
+      length: number;
+      callee: Function;
+    } = arguments;
     if (timer) clearTimeout(timer);
     if (immediate) {
       const callNow = !timer;

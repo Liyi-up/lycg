@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "lycg",
-  "version": "1.0.5-beat",
+  "version": "1.0.6-beat",
   "files": [
     "dist"
   ],
@@ -40,6 +40,7 @@
     "antd-mobile": "^5.0.0-rc.7",
     "caniuse-lite": "^1.0.30001292",
     "compressorjs": "^1.1.1",
+    "html2canvas": "^1.4.1",
     "lodash": "^4.17.21",
     "macy": "^2.5.1",
     "qrcode.react": "^1.0.1",

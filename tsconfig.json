@@ -11,9 +11,10 @@
     "strict": true,
     "typeRoots": ["./src/typings", "./node_modules/@types"],
     "paths": {
-      "cvmcp": ["src/index.ts"],
-      "cvmcp/src/*": ["src/*"],
-      "cvmcp/es/*": ["src/*"]
+      "lycg": ["src/index.ts"],
+      "lycg/src/*": ["src/*"],
+      "lycg/es/*": ["src/*"],
+      "@/*": ["src/*"]
     },
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
