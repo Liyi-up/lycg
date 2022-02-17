@@ -4,8 +4,8 @@ const repo = 'lycg';
 
 export default defineConfig({
   title: repo,
-  base: `/${repo}/`,
-  publicPath: `/${repo}/`,
+  // base: `/${repo}/`,
+  // publicPath: `/${repo}/`,
   favicon: 'https://s4.ax1x.com/2021/12/23/TGYgZd.png',
   logo: 'https://s4.ax1x.com/2021/12/23/TGYgZd.png',
   mode: 'site',
