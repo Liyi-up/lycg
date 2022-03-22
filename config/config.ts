@@ -1,11 +1,12 @@
 import { defineConfig } from 'dumi';
 import { components } from './conponents';
+import { samples } from './samples';
 const repo = 'lycg';
 
 export default defineConfig({
   title: repo,
-  // base: `/${repo}/`,
-  // publicPath: `/${repo}/`,
+  base: `/${repo}/`,
+  publicPath: `/${repo}/`,
   favicon: 'https://s4.ax1x.com/2021/12/23/TGYgZd.png',
   logo: 'https://s4.ax1x.com/2021/12/23/TGYgZd.png',
   mode: 'site',
@@ -39,6 +40,24 @@ export default defineConfig({
         path: 'index',
       },
     ],
+    '/samples': [
+      {
+        title: '概要',
+        path: '/samples',
+      },
+      {
+        title: '地图',
+        children: samples.map,
+      },
+      {
+        title: '头像裁切',
+        children: samples.avatar,
+      },
+      {
+        title: '签字板',
+        children: samples.signature,
+      },
+    ],
     '/guide': [
       {
         title: '快速上手',
@@ -61,6 +80,10 @@ export default defineConfig({
       {
         title: '其他',
         children: components.other,
+      },
+      {
+        title: '数据展示',
+        children: components.dataView,
       },
     ],
   },

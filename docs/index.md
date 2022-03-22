@@ -1,12 +1,13 @@
 ---
-title: lycg - 为组件开发场景而生的文档工具
+title: lycg -react个人移动端开发组
 order: 10
 hero:
   title: lycg
-  desc: 📖 为组件开发场景而生的文档工具
+  desc: 📖react个人移动端开发组 提供技术支持
   actions:
     - text: 快速上手
       link: /guide/quick-start
+
 features:
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/881dc458-f20b-407b-947a-95104b5ec82b/k79dm8ih_w144_h144.png
     title: 开箱即用
@@ -17,5 +18,6 @@ features:
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/b8570f4d-c1b1-45eb-a1da-abff53159967/kj9t990h_w144_h144.png
     title: 主题系统
     desc: 渐进式的自定义主题能力，小到扩展自己的 Markdown 标签，大到自定义完整主题包，全由你定
-footer: Open-source MIT Licensed | Copyright © 2019-present<br />Powered by self
+
+footer: Open-source MIT Licensed | Copyright © 2021-present
 ---
