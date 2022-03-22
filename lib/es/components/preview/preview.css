@@ -1,0 +1,21 @@
+.ly-preview-header {
+  --height: 45px;
+  height: var(--height);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12px;
+  align-items: center;
+  box-shadow: 0px 1px 0px 0px rgba(30, 36, 50, 0.06);
+}
+.ly-preview-header-title {
+  font-weight: bold;
+  font-size: large;
+  margin-right: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ly-preview-content {
+  height: calc(100vh - 45px);
+  overflow-y: scroll;
+}

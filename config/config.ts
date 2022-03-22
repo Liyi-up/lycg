@@ -1,12 +1,14 @@
 import { defineConfig } from 'dumi';
 import { components } from './conponents';
 import { samples } from './samples';
-const repo = 'lycg';
+
+// const repo = 'lycg'; // github 发布
+const repo = 'lycg'; // 腾讯云服务器发布
 
 export default defineConfig({
   title: repo,
-  base: `/${repo}/`,
-  publicPath: `/${repo}/`,
+  // base: `/${repo}/`,
+  // publicPath: `/${repo}/`,
   favicon: 'https://s4.ax1x.com/2021/12/23/TGYgZd.png',
   logo: 'https://s4.ax1x.com/2021/12/23/TGYgZd.png',
   mode: 'site',

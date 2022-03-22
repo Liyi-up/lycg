@@ -1,0 +1,36 @@
+.ly-link-sider-bar {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+.ly-link-sider-bar .ly-link-sider-bar-nav-wrap {
+  width: 80px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.ly-link-sider-bar .ly-link-sider-bar-nav-wrap .ly-link-sider-bar-nav-item {
+  text-decoration: none;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  writing-mode: vertical-lr;
+  color: #000;
+}
+.ly-link-sider-bar .ly-link-sider-bar-nav-wrap .activate {
+  background: #84dfff;
+}
+.ly-link-sider-bar .ly-link-sider-bar-item-wrap {
+  width: 100%;
+  overflow: auto;
+  white-space: nowrap;
+  height: 100%;
+}
+.ly-link-sider-bar .ly-link-sider-bar-item-wrap div {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

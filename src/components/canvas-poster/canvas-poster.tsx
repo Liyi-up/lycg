@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Toast } from 'antd-mobile';
-import QRCode from 'qrcode.react';
-import testImg from './test.jpg';
+import testImg from '../../assets/canvas-poster/test.jpg';
+const QRCode = require('qrcode.react') ;
 export type CompProps = {
   /**
    * 海报大小
