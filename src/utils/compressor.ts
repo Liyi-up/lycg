@@ -7,11 +7,7 @@ import Compressor from 'compressorjs';
  * @param quality 压缩图片的质量 默认为 0.8
  * @returns Blob 格式的文件
  */
-export function compress(
-  file: File,
-  watermark: string,
-  quality: number,
-): Promise<File> {
+export function compress(file: File, watermark: string, quality: number): Promise<File> {
   return new Promise((resolve, reject) => {
     new Compressor(file, {
       quality,
@@ -22,13 +18,9 @@ export function compress(
           context.fillText(watermark, 20, canvas.height - 20);
         }
       },
-      success: result => {
+      success: (result) => {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        resolve(
-          new window.File([result], (result as any).name, {
-            type: result.type,
-          }),
-        );
+        resolve(new window.File([result], (result as any).name, { type: result.type }));
       },
       error: reject,
     });

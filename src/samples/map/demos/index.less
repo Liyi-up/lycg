@@ -1,0 +1,56 @@
+.page {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.map {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background-color: #fff;
+  margin: 0 16px;
+  padding: 16px;
+  border-radius: 8px;
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px;
+  }
+}
+
+.heighter {
+  animation: highter 0.5s ease-out forwards;
+}
+
+.smaller {
+  animation: smaller 0.8s ease-out forwards;
+}
+
+@keyframes highter {
+  0% {
+    bottom: -300px;
+  }
+
+  100% {
+    bottom: 50px;
+  }
+}
+
+@keyframes smaller {
+  0% {
+    bottom: 0;
+  }
+
+  100% {
+    bottom: -300px;
+  }
+}

@@ -1,11 +1,7 @@
-import { Toast } from 'antd-mobile';
+import { Toast } from 'antd-mobile'
 
 /** 图片上传到服务器 */
-export async function uploadToServer(
-  file: File,
-  uploadUrl: string,
-  imgPreUrl: string,
-) {
+export async function uploadToServer(file: File, uploadUrl: string, imgPreUrl: string) {
   const formData = new FormData();
   formData.append('file', file);
 
@@ -19,8 +15,8 @@ export async function uploadToServer(
   const res = await fetch(uploadUrl, {
     method: 'POST',
     body: formData,
-  });
-  const data: { code: number; data: string } = await res.json();
+  })
+  const data: { code: number, data: string } = await res.json();
 
   Toast.clear();
   if (data.code === 200) {
@@ -29,7 +25,7 @@ export async function uploadToServer(
     Toast.show({
       icon: 'fail',
       content: '上传失败',
-    });
+    })
     return '';
   }
-}
+};

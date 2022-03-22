@@ -1,5 +1,5 @@
 export const STR =
-  'A,B,C,E,F,G,H,J,K,L,M,N,P,Q,R,S,T,W,X,Y,Z,1,2,3,4,5,6,7,8,9,0,q,w,e,r,t,y,u,i,o,p,a,s,d,f,g,h,j,k,l,z,x,c,v,b,n,m';
+  'A,B,C,E,F,G,H,J,K,L,M,N,P,Q,R,S,T,W,X,Y,Z,1,2,3,4,5,6,7,8,9,q,w,e,r,t,y,u,i,p,a,s,d,f,g,h,j,k,l,z,x,c,v,b,n,m';
 export const DATA = STR.split(',');
 export const DATA_LENGTH = DATA.length;
 
@@ -14,6 +14,7 @@ export const randomColor = () => {
   return `rgb(${r},${g},${b})`;
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const isFunction = (FunName: any) => {
   return typeof FunName === 'function';
 };
