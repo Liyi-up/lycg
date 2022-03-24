@@ -4,42 +4,50 @@ import { context, Link, NavLink } from 'dumi/theme'
 import LocaleSelect from './LocaleSelect'
 import './Navbar.less'
 import p from '../../../package.json'
-import SearchBar from './SearchBar'
 
 interface INavbarProps {
   location: any
+  navPrefix?: React.ReactNode
   darkPrefix?: React.ReactNode
   onMobileMenuClick: (ev: MouseEvent<HTMLButtonElement>) => void
 }
 
 const Navbar: FC<INavbarProps> = ({
   onMobileMenuClick,
+  navPrefix,
   location,
   darkPrefix,
 }) => {
   const {
     base,
-    config: { title, logo },
+    config: { mode, title, logo },
     nav: navItems,
   } = useContext(context)
 
   return (
-    <div className='__dumi-default-navbar'>
+    <div className='__dumi-default-navbar' data-mode={mode}>
+      {/* menu toogle button (only for mobile) */}
       <button
         className='__dumi-default-navbar-toggle'
         onClick={onMobileMenuClick}
       />
-      <div className='left-part'>
-        <Link className='__dumi-default-navbar-logo' to={base}>
-          <img src={logo.toString()} alt='logo' />
-          <div className='title'>{title}</div>
-          <div className='version'>{`v${p.version}`}</div>
+      {/* logo & title */}
+      <div>
+        <Link
+          className='__dumi-default-navbar-logo'
+          style={{
+            backgroundImage: logo ? `url('${logo}')` : undefined,
+          }}
+          to={base}
+          data-plaintext={logo === false || undefined}
+        >
+          {title}
         </Link>
+        <div className='__dumi-default-navbar-version'>{`v${p.version}`}</div>
       </div>
       <nav>
-        <div className='nav-item'>
-          <SearchBar />
-        </div>
+        {navPrefix}
+        {/* nav */}
         {navItems.map(nav => {
           const child = Boolean(nav.children?.length) && (
             <ul>

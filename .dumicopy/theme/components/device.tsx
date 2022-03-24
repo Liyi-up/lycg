@@ -9,12 +9,13 @@ interface IDeviceProps {
   url: string
 }
 
-export const Device: FC<IDeviceProps> = ({ url }) => {
+export const Device: FC<IDeviceProps> = ({ url, className }) => {
   const [renderKey, setRenderKey] = useState(Math.random())
   const [color] = usePrefersColor()
   const {
-    config: { mode },
+    config: { mode, theme },
   } = useContext(context)
+  const carrier = theme?.carrier || 'dumi'
 
   // re-render iframe if prefers color changed
   useEffect(() => {

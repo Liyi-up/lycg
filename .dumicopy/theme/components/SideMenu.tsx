@@ -1,10 +1,8 @@
 import type { FC } from 'react'
 import React, { useContext } from 'react'
-import { context, NavLink } from 'dumi/theme'
+import { context, Link, NavLink } from 'dumi/theme'
 import LocaleSelect from './LocaleSelect'
 import './SideMenu.less'
-// import { DocSearch } from '@docsearch/react'
-// import '@docsearch/css'
 
 interface INavbarProps {
   mobileMenuCollapsed: boolean
@@ -21,6 +19,7 @@ const SideMenu: FC<INavbarProps> = ({
     config: { mode },
     menu,
     nav: navItems,
+    base,
     meta,
   } = useContext(context)
   const isHiddenMenus =
@@ -65,16 +64,11 @@ const SideMenu: FC<INavbarProps> = ({
             </ul>
           )}
           {/* site mode locale select */}
-          {/*<LocaleSelect location={location} />*/}
-          {/*{darkPrefix}*/}
+          <LocaleSelect location={location} />
+          {darkPrefix}
         </div>
         {/* menu list */}
         <ul className='__dumi-default-menu-list'>
-          {/*<DocSearch*/}
-          {/*  appId='BH4D9OD16A'*/}
-          {/*  indexName='ant_design_mobile'*/}
-          {/*  apiKey='3f05ea4cbd28d07129a5e32e87a856b5'*/}
-          {/*/>*/}
           {!isHiddenMenus &&
             menu.map(item => {
               // always use meta from routes to reduce menu data size

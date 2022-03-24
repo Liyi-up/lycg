@@ -2,6 +2,7 @@
 
 .@{prefix}-previewer {
   background-color: #fff;
+  border: 1px solid @c-border;
   border-radius: 1px;
 
   [data-prefers-color='dark'] & {
@@ -10,13 +11,9 @@
   }
 
   &[data-debug] {
-    .debug-badge {
-      display: inline-block;
-      background-color: #ffcb00;
-      color: #735600;
-      border-radius: 2px;
-      padding: 2px 6px;
-    }
+    margin-top: 32px;
+    border-color: #ffcb00;
+
     &::before {
       content: 'DEV ONLY';
       float: left;
@@ -249,8 +246,10 @@
       }
     }
 
-    .spacer {
+    // split action buttons by a blank node
+    > span {
       flex: 1;
+      display: inline-block;
     }
   }
 
@@ -263,9 +262,46 @@
 
     &-tab {
       border-top: 1px dashed @c-border;
-      --title-font-size: 14px;
-      .adm-tabs-header {
-        border-bottom: none;
+
+      [data-prefers-color='dark'] & {
+        border-color: @c-border-dark;
+      }
+
+      .@{prefix}-tabs-tab-btn {
+        position: relative;
+        padding-left: 32px;
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          margin-right: 4px;
+          display: inline-block;
+          box-sizing: border-box;
+        }
+
+        &::before {
+          left: 16px;
+          top: 50%;
+          margin-top: -6px;
+          width: 10px;
+          height: 12px;
+          border: 1px solid @c-secondary;
+        }
+
+        &::after {
+          top: 50%;
+          left: 23px;
+          margin-top: -7px;
+          width: 4px;
+          height: 4px;
+          background: #fff;
+          border-bottom: 1px solid @c-secondary;
+          transform: rotate(45deg);
+          [data-prefers-color='dark'] & {
+            background: @c-bg-dark;
+          }
+        }
       }
     }
   }
@@ -273,6 +309,14 @@
 
 .@{prefix}-tabs {
   overflow: hidden;
+
+  &.@{prefix}-tabs-top {
+    flex-direction: column;
+
+    .@{prefix}-tabs-ink-bar {
+      bottom: 0;
+    }
+  }
 
   &-nav {
     display: flex;

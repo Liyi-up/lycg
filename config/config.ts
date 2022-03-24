@@ -2,8 +2,7 @@ import { defineConfig } from 'dumi';
 import { components } from './conponents';
 import { samples } from './samples';
 
-// const repo = 'lycg'; // github 发布
-const repo = 'lycg'; // 腾讯云服务器发布
+const repo = 'lycg'; // github 发布
 
 export default defineConfig({
   title: repo,
